@@ -1,4 +1,4 @@
-name: build
+name: r6c
 
 on:
   repository_dispatch:
