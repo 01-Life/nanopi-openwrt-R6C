@@ -93,6 +93,7 @@ jobs:
           [ -f .config_fix ] && cat .config_fix >> .config
           make defconfig && sed -i -E 's/# (CONFIG_.*_COMPRESS_UPX) is not set/\1=y/' .config && make defconfig
           cat .config
+          cp .config  r6c-config
 
       - name: Debug via tmate
         uses: stupidloud/ssh2actions@main
